@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>炒股记录与心得</title>
+      <link href="/2026/01/13/%E7%82%92%E8%82%A1%E8%AE%B0%E5%BD%95%E4%B8%8E%E5%BF%83%E5%BE%97/"/>
+      <url>/2026/01/13/%E7%82%92%E8%82%A1%E8%AE%B0%E5%BD%95%E4%B8%8E%E5%BF%83%E5%BE%97/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 娱乐项目 </category>
+          
+          <category> 炒股 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 炒股 </tag>
+            
+            <tag> 记录 </tag>
+            
+            <tag> 心得 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 使用教程：从零开始搭建与维护个人博客</title>
+      <link href="/2023/01/13/hexo%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+      <url>/2023/01/13/hexo%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一-为什么选择-hexo"><a class="markdownIt-Anchor" href="#一-为什么选择-hexo">#</a> 一、为什么选择 Hexo？</h2><p>Hexo 是一个<strong>基于 Node.js 的静态博客框架</strong>，核心特点包括：</p><ul><li>使用 Markdown 写作，专注内容本身</li><li>构建速度快，生成纯静态文件</li><li>天然适配 GitHub Pages / Gitee Pages</li><li>主题生态成熟，适合技术博客长期维护</li></ul><p>如果你的目标是：</p><ul><li>搭建<strong>个人技术博客</strong></li><li>记录学习笔记 / 科研笔记 / 项目总结</li><li>不想维护服务器</li></ul><p>那么 Hexo 是一个非常稳妥的选择。</p><hr><h2 id="二-hexo-的整体工作流程"><a class="markdownIt-Anchor" href="#二-hexo-的整体工作流程">#</a> 二、Hexo 的整体工作流程</h2><p>Hexo 的使用逻辑可以抽象为四步：</p><ol><li><strong>初始化博客目录</strong></li><li><strong>编写 Markdown 文章</strong></li><li><strong>本地生成静态页面</strong></li><li><strong>部署到远程平台（如 GitHub Pages）</strong></li></ol><p>对应的核心命令是：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo new post</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><hr><h2 id="三-环境准备与安装"><a class="markdownIt-Anchor" href="#三-环境准备与安装">#</a> 三、环境准备与安装</h2><h3 id="31-安装-nodejs"><a class="markdownIt-Anchor" href="#31-安装-nodejs">#</a> 3.1 安装 Node.js</h3><p>Hexo 依赖 Node.js，建议版本：</p><ul><li>Node.js ≥ 18（LTS）</li></ul><p>安装完成后检查：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><hr><h3 id="32-全局安装-hexo-cli"><a class="markdownIt-Anchor" href="#32-全局安装-hexo-cli">#</a> 3.2 全局安装 Hexo CLI</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>验证安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><hr><h2 id="四-初始化-hexo-博客"><a class="markdownIt-Anchor" href="#四-初始化-hexo-博客">#</a> 四、初始化 Hexo 博客</h2><p>在你希望存放博客的目录中执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>初始化完成后，目录结构大致如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">my-blog/</span><br><span class="line">├── _config.yml        # 站点配置</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds/         # 文章模板</span><br><span class="line">├── source/</span><br><span class="line">│   └── _posts/        # 博客文章</span><br><span class="line">└── themes/            # 主题目录</span><br></pre></td></tr></table></figure><hr><h2 id="五-创建与编写博客文章"><a class="markdownIt-Anchor" href="#五-创建与编写博客文章">#</a> 五、创建与编写博客文章</h2><h3 id="51-新建文章"><a class="markdownIt-Anchor" href="#51-新建文章">#</a> 5.1 新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;Hexo 使用教程&quot;</span></span><br></pre></td></tr></table></figure><p>生成的文件位于：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source/_posts/Hexo-使用教程.md</span><br></pre></td></tr></table></figure><hr><h3 id="52-文章基本结构必须遵守"><a class="markdownIt-Anchor" href="#52-文章基本结构必须遵守">#</a> 5.2 文章基本结构（必须遵守）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line">date: 时间</span><br><span class="line">categories:</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">正文内容</span><br></pre></td></tr></table></figure><p><strong>注意：</strong></p><ul><li>标题只写在 Front-matter 中</li><li>正文从  <code>##</code>  二级标题开始</li></ul><hr><h3 id="53-推荐的正文写作规范"><a class="markdownIt-Anchor" href="#53-推荐的正文写作规范">#</a> 5.3 推荐的正文写作规范</h3><ul><li>使用  <code>## / ###</code>  构建清晰层级</li><li>每个章节回答一个明确问题</li><li>代码块必须标注语言</li></ul><p>示例：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```bash</span></span><br><span class="line"><span class="code">hexo clean</span></span><br><span class="line"><span class="code">hexo g</span></span><br><span class="line"><span class="code">hexo s</span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">## 六、本地预览博客</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">启动本地服务器：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">```</span>bash</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>浏览器访问：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure><p>常用组合命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><hr><h2 id="七-主题安装与切换"><a class="markdownIt-Anchor" href="#七-主题安装与切换">#</a> 七、主题安装与切换</h2><h3 id="71-下载主题"><a class="markdownIt-Anchor" href="#71-下载主题">#</a> 7.1 下载主题</h3><p>以 GitHub 上的主题为例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/xxx/hexo-theme-xxx.git</span><br></pre></td></tr></table></figure><hr><h3 id="72-启用主题"><a class="markdownIt-Anchor" href="#72-启用主题">#</a> 7.2 启用主题</h3><p>修改根目录  <code>_config.yml</code> ：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-xxx</span></span><br></pre></td></tr></table></figure><p>然后重新生成并预览：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><hr><h2 id="八-部署到-github-pages"><a class="markdownIt-Anchor" href="#八-部署到-github-pages">#</a> 八、部署到 GitHub Pages</h2><h3 id="81-安装部署插件"><a class="markdownIt-Anchor" href="#81-安装部署插件">#</a> 8.1 安装部署插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><hr><h3 id="82-配置部署信息"><a class="markdownIt-Anchor" href="#82-配置部署信息">#</a> 8.2 配置部署信息</h3><p>在  <code>_config.yml</code>  中添加：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:你的用户名/你的用户名.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure><hr><h3 id="83-一键部署"><a class="markdownIt-Anchor" href="#83-一键部署">#</a> 8.3 一键部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>部署完成后，访问：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://你的用户名.github.io</span><br></pre></td></tr></table></figure><hr><h2 id="九-常见问题与建议"><a class="markdownIt-Anchor" href="#九-常见问题与建议">#</a> 九、常见问题与建议</h2><h3 id="91-文章不显示"><a class="markdownIt-Anchor" href="#91-文章不显示">#</a> 9.1 文章不显示</h3><ul><li>是否忘记写  <code>date</code></li><li>是否文件名在  <code>_posts/</code>  下</li><li>是否执行了  <code>hexo generate</code></li></ul><hr><h3 id="92-中文路径与空格问题"><a class="markdownIt-Anchor" href="#92-中文路径与空格问题">#</a> 9.2 中文路径与空格问题</h3><ul><li>文件名建议使用英文或拼音</li><li>图片路径统一使用相对路径</li></ul><hr><h3 id="93-长期维护建议"><a class="markdownIt-Anchor" href="#93-长期维护建议">#</a> 9.3 长期维护建议</h3><ul><li>博客目录使用 Git 管理</li><li><code>source</code>  和  <code>_config.yml</code>  必须纳入版本控制</li><li><code>node_modules</code>  可不提交</li></ul><hr><h2 id="十-总结"><a class="markdownIt-Anchor" href="#十-总结">#</a> 十、总结</h2><p>Hexo 的核心优势在于：</p><ul><li>写作体验接近 “纯 Markdown”</li><li>构建与部署流程清晰</li><li>非常适合技术与学术背景的长期记录</li></ul><p>一旦你形成固定写作模板，维护成本会非常低。</p><hr><blockquote><p>如果你后续主要写 <strong>AI / 数学 / 代码 / 科研笔记</strong>，<br>建议尽早统一 Markdown 规范与公式、代码风格。</p></blockquote><hr><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"></span><br><span class="line">如果你愿意，下一步我可以直接帮你：</span><br><span class="line"></span><br><span class="line">- 把这篇教程拆成 **Hexo 系列文章**</span><br><span class="line">- 给你做一个 **`scaffolds/post.md` 专用模板**</span><br><span class="line">- 按你现在用的主题（Kratos / NexT）精调字段</span><br><span class="line">- 把你现有的一篇课程 / 研究笔记整理成“可发布博客”</span><br><span class="line"></span><br><span class="line">你直接说你下一步想继续做哪一步即可。</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> GitHub Pages </tag>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/01/13/hello-world/"/>
+      <url>/2022/01/13/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing</span></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server</span></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating</span></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> GitHub Pages </tag>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
